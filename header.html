@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Header</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f8f9fa, #e0eafc);
+      color: #333;
+      overflow-x: hidden;
+      transition: background-color 1s ease;
+    }
+
+    header {
+      animation: fadeIn 1s ease;
+    }
+
+    .row1 {
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(270deg, #00c9ff, #92fe9d);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+      padding: 0 5%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.5s ease;
+    }
+
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .col1 img {
+      height: 80px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .col1 img:hover {
+      transform: scale(1.1);
+    }
+
+    .col2 {
+      display: flex;
+      gap: 30px;
+    }
+
+    .col2 a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+      padding: 10px 0;
+      transition: all 0.3s ease;
+    }
+
+    .col2 a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #000;
+      left: 0;
+      bottom: 0;
+      transition: width 0.4s ease-in-out;
+    }
+
+    .col2 a:hover::after {
+      width: 100%;
+    }
+
+    .col2 a:hover {
+      color: #fff;
+    }
+    .button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+    .row2 {
+      width: 100%;
+      text-align: center;
+      padding: 30px 10px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .row2 img {
+      width: 90%;
+      max-width: 1000px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      margin: 20px auto;
+      transition: transform 0.5s ease, filter 0.4s ease;
+    }
+
+    .row2 img:hover {
+      transform: scale(1.02);
+      filter: brightness(1.1);
+    }
+
+    .button-btn {
+      padding: 15px 35px;
+      background-color: #7b2cbf;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(123, 44, 191, 0.4);
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .button-btn::after {
+      content: "";
+      background: rgba(255, 255, 255, 0.4);
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      transition: width 0.4s ease, height 0.4s ease;
+    }
+
+    .button-btn:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    .button-btn:hover {
+      transform: scale(1.05);
+      background-color: #5a189a;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .navbar {
+  display: flex;
+  gap: 25px; /* Adjust spacing as needed */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  left: 0;
+  bottom: 0;
+  transition: width 0.4s ease-in-out;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .row1 {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+      }
+
+      .col1,
+      .col2 {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      .col2 a {
+        margin: 5px 10px;
+      }
+
+      .row2 img {
+        height: 250px;
+      }
+
+      .button-btn {
+        width: 80%;
+        max-width: 300px;
+      }
+    }
+  
+/* === Added for new pages === */
+.section-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:60px 20px;
+}
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:2.5rem;
+  color:#333;
+}
+/* Offers */
+.offer-list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+.offer-card{
+  background:#fff;
+  width:300px;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  transition:transform 0.3s;
+}
+.offer-card:hover{ transform:translateY(-8px); }
+.offer-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.offer-card h3{
+  padding:15px 15px 5px;
+  font-size:1.3rem;
+}
+.offer-card p{
+  padding:0 15px 15px;
+  color:#555;
+  font-size:0.95rem;
+}
+/* Virtual Tour */
+.video-wrapper{
+  position:relative;
+  padding-bottom:56.25%;
+  height:0;
+  margin-bottom:40px;
+}
+.video-wrapper iframe{
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:100%;
+  border:0;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.navbar {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 220px; 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 20px;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-weight: 600;
+  white-space: nowrap; 
+}
+
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #fff;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+.gallery img{
+  width:260px;height:160px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+/* Blog */
+.blog-list{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+.blog-post{
+  display:flex;
+  gap:20px;
+  background:#fff;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  transition:transform 0.3s;
+}
+.blog-post:hover{ transform:translateY(-5px); }
+.blog-post img{
+  width:180px;height:120px;
+  border-radius:10px;
+  object-fit:cover;
+}
+.blog-post h3{ margin:0 0 8px 0; }
+.blog-post p{ margin:0;color:#666; }
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="row1">
+      <div class="col1">
+        <img src="logo1.png" alt="Logo" />
+      </div>
+      <div class="navbar">
+        <a href="home.php">Home</a>
+        <a href="about.php">About</a>
+        <a href="rooms.php">Rooms</a>
+
+        <div class="dropdown">
+          <a href="checkin.php" class="dropbtn">Booking</a>
+          <div class="dropdown-content">
+            <a href="checkin.php">Check-in</a>
+            <a href="cancel.php">Cancel Booking</a>
+        
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#" class="dropbtn">More</a>
+          <div class="dropdown-content">
+            <!-- <a href="offers.php">Offers</a> -->
+            <a href="virtualtour.php">Site Tour</a>
+            <a href="blog.php">Blog</a>
+            <a href="reviews.php">Feedback</a>
+            <a href="contact.php">Contact</a>
+          </div>
+        </div>
+        <a href="login.php">Admin</a>
+        <!-- New Tabs -->
+         
+         <div class="dropdown">
+          <a href="#" class="dropbtn">Account</a>
+          <div class="dropdown-content">
+        <a href="register.php">Register</a>
+        <a href="loginuser.php">Login</a>
+        <!-- <a href="mybookings.php">My Bookings</a> -->
+        <a href="logout.php">Logout</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="row2">
+      <img src="pic2.jpg" alt="Banner Image" />
+    </div>
+  </header>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Amil Footer</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #7f5af0, #2cb67d);
+      color: #fff;
+      padding: 60px 20px 20px;
+      border-radius: 30px 30px 0 0;
+      box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      font-size: 16px;
+      color: #f0f0f0;
+      text-decoration: none;
+      margin-bottom: 12px;
+      display: block;
+      transition: 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #000;
+      transform: translateX(5px);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      background-color: #fff;
+      color: #333;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 18px;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background-color: #000;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ffffff50;
+      font-style: italic;
+      font-size: 18px;
+      color: #e8e8e8;
+    }
+
+    .footer-img {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .footer-img img {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .footer-img img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 15px;
+      color: #ccc;
+    }
+
+    .admin-login-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .admin-login-link a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: underline;
+      transition: 0.3s ease;
+    }
+
+    .admin-login-link a:hover {
+      color: #000;
+    }
+
+    @media screen and (max-width: 768px) {
+      .footer-section {
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Footer Start -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Hotel Amil</h3>
+        <p>Hotel Amil is a luxurious 3-star stay offering deluxe, suite, and family rooms. Enjoy dining, pool, banquet halls, and more.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#">Rooms</a>
+        <a href="#">Booking</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>259-A, Tenkasi Main Road</p>
+        <p>Rajapalayam, Tamil Nadu</p>
+        <a href="tel:+91-9876543210">+91-9876543210</a>
+        <a href="mailto:info@hotelamil.com">info@hotelamil.com</a>
+      </div>
+    </div>
+
+    <div class="admin-login-link">
+      <a href="login.php">Login as Admin</a>
+    </div>
+
+    <div class="footer-note">
+      Book your rooms, enjoy your days at Amil!
+      <div class="footer-img">
+        <img src="smiley.jpg" alt="Smiley" />
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Hotel Amil, Rajapalayam, Tamil Nadu, India. All Rights Reserved.
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+</body>
+</html>
